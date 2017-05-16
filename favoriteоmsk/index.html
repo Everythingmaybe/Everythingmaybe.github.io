@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Галерея "Любимый Омск"</title>
+        <meta name="keywords" content="омск,красивый,любимый,фото,галерея,город,метромост,улица ленина,улица гагарина,описание мест,история,драматический театр">
+        <meta name="description" content="Фото-галерея любимого города Омска. В ней собраны фотографии самых красивых мест нашего города.">
+        <meta name="google-site-verification" content="rPmMPtBu8KBISfzg0q7STURH-JcJciFZNCCXRZPsP8c" />
+		<link rel="stylesheet" href="style/style_sheet.css">
+		<link rel="shortcut icon" href="favicon2.png" type="image/png">
+		<script type="text/javascript" src="Slider.js"></script>
+		
+</head>
+
+<body>
+	<header>
+		<a class="pause_play" onclick="pause()">PLAY</a>
+	<!--	<ul class=men>
+			<li><a>Главная</a></li>
+			<li><a>Неглавная</a></li>
+			<li><a>Почти</a></li>
+		</ul>
+		<a class=menu onclick="menu_vis()">МЕНЮ</a>
+		-->
+	</header>
+	    <img src="img/volume.png" id="mute_button"  onclick="mute()" >
+		<div class="slideLeft"><a class="slide" onclick="slider.left()"><</a></div>
+		<div class="slideRight"><a class="slide" onclick="slider.right()">></a></div>
+	    <div class="center-center">
+			<div class="content-center">
+				<img style="opacity:0.8" width="150px" src="img/lapaw.png" >
+				<h1>ЛЮБИМЫЙ <p>ОМСК</p></h1>
+				<a class="metro" onclick="resize_block()">МЕТРОМОСТ</a>
+				<div class="name">
+				<div></div>
+				</div>
+				<canvas id="canvas"></canvas>
+			</div>   
+		</div>
+		<audio id="music" src="music/1.mp3" autoplay loop></audio>
+		<footer><p>Николай Ширшов © 2017. Автор фотографий: <a href="https://vk.com/fotokud" target="_blank">Андрей Кудрявцев</a>.</p></footer>
+</body>
+
+</html>

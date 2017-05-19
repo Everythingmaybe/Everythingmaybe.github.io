@@ -23,7 +23,78 @@ body{
 	padding:0;
 	cursor: default;
 	-webkit-transition:1s;
+	-o-transition:1s;
+	-moz-transition:1s;
 	transition:1s;
+	opacity: 1;
+}
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index:100000;
+	background-color: #0C0C0C ;
+}
+
+.pulse {
+	position: relative;
+	left: 50%;
+	top: 50vh;
+	margin-left: -40px;
+	margin-top: -40px;
+}
+.pulse::before, .pulse::after {
+	content: '';
+	border: 5px solid #323232;
+	width: 80px;
+	height: 80px;
+	border-radius: 500px;
+	position: absolute;
+}
+
+.pulse::before {
+	-webkit-animation: pulse-outher .8s infinite ease-in;
+	-moz-animation: pulse-outher .8s infinite ease-in;
+	animation: pulse-outher .8s infinite ease-in;
+}
+
+.pulse::after {
+	-webkit-animation: pulse-inner .8s infinite linear;
+	-moz-animation: pulse-inner .8s infinite linear;
+	animation: pulse-inner .8s infinite linear;
+}
+@-webkit-keyframes pulse-outher {
+	0% {opacity:100;}
+	50% {opacity:50;}
+	100% {opacity:0;}
+}
+@-moz-keyframes pulse-outher {
+	0% {opacity:100;}
+	50% {opacity:50;}
+	100% {opacity:0;}
+}
+@keyframes pulse-outher {
+	0% {opacity:100;}
+	50% {opacity:50;}
+	100% {opacity:0;}
+}
+
+@-webkit-keyframes pulse-inner {
+	0% {opacity:0; -webkit-transform:scale(0); transform:scale(0);}
+	100% {opacity:100; -webkit-transform: scale(1); transform: scale(1);}
+}
+
+@-moz-keyframes pulse-inner {
+	0% {opacity:0; -moz-transform:scale(0); transform:scale(0);}
+	100% {opacity:100; -moz-transform: scale(1); transform: scale(1);}
+}
+
+@keyframes pulse-inner {
+	0% {opacity:0; -webkit-transform:scale(0); -moz-transform:scale(0); transform:scale(0);}
+	100% {opacity:100; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1);}
 }
 
 canvas{
@@ -33,6 +104,7 @@ canvas{
 	top:0;
 	left:0;
 	z-index:-1;
+	opacity: 0.7
 }
 
 /******HEADER******/
@@ -58,6 +130,8 @@ canvas{
 	    margin-top: 0.6944444444444444%;
 		font-weight:bold;
 		-webkit-transition:all 0.5s ease-out 0s;
+		-o-transition: all 0.5s ease-out 0s;
+		-moz-transition: all 0.5s ease-out 0s;
 		transition: all 0.5s ease-out 0s;
 	}
 	
@@ -67,6 +141,8 @@ canvas{
 	left:1.388888888888889%;
 	opacity: 0.7;
 	-webkit-transition: 1s;
+	-o-transition: 1s;
+	-moz-transition: 1s;
 	transition: 1s;
 	z-index:5;
 	width:50px;
@@ -97,6 +173,8 @@ canvas{
 	.men{
 		display:none;
 		-webkit-transition:all 1s ease-out 0s;
+		-o-transition: all 1s ease-out 0s;
+		-moz-transition: all 1s ease-out 0s;
 		transition: all 1s ease-out 0s;
 		float:none;
 		text-align: center;
@@ -122,10 +200,13 @@ canvas{
 	    line-height: 40px;
 	    padding: 0 15px;
 		-webkit-transition:all 0.5s ease-out 0s;
+		-o-transition: all 0.5s ease-out 0s;
+		-moz-transition: all 0.5s ease-out 0s;
 		transition: all 0.5s ease-out 0s;
 		background-color: rgba(0,0,0,.0);
 		-webkit-transform:skewX(-10deg);
 		-ms-transform:skewX(-10deg);
+		-moz-transform:skewX(-10deg);
 		transform:skewX(-10deg);
 	}
 	
@@ -134,6 +215,7 @@ canvas{
 		text-shadow:0px 0px 3px #fff;
 		-webkit-transform: skew(0deg);
 		-ms-transform: skew(0deg);
+		-moz-transform: skew(0deg);
 		transform: skew(0deg);
 		background-color: rgba(0,0,0,.1);	
 	}
@@ -171,6 +253,8 @@ canvas{
 		font-weight:bold;
 		background: transparent;
 		-webkit-transition:all 0.5s ease-out 0s;
+		-o-transition: all 0.5s ease-out 0s;
+		-moz-transition: all 0.5s ease-out 0s;
 		transition: all 0.5s ease-out 0s;
 		height:50px;
 	    vertical-align: middle;
@@ -226,6 +310,8 @@ canvas{
 			font-weight:bold;
 			text-shadow: red 0 0 10px;
 			-webkit-transition:all 1s ease-out 0s;
+			-o-transition: all 1s ease-out 0s;
+			-moz-transition: all 1s ease-out 0s;
 			transition: all 1s ease-out 0s;
 			padding:0;
 			margin: 0;
@@ -247,6 +333,8 @@ canvas{
 			font-weight:900;
 			background: transparent;
 			-webkit-transition:all 0.5s ease-out 0s;
+			-o-transition: all 0.5s ease-out 0s;
+			-moz-transition: all 0.5s ease-out 0s;
 			transition: all 0.5s ease-out 0s;
 			z-index:9999;
 			
@@ -264,12 +352,15 @@ canvas{
 			display:table;
 			margin:0 auto;
 			-webkit-transition:all 0.5s ease-out 0s;
+			-o-transition: all 0.5s ease-out 0s;
+			-moz-transition: all 0.5s ease-out 0s;
 			transition: all 0.5s ease-out 0s;
 			background-color:rgba(255,255,255,0.7);
 			color:black;
 			font-size:180%;
 			text-transform: none;
 			-ms-flex-line-pack: center;
+			-webkit-align-content: center;
 			align-content: center;
 			z-index:1000;
 		

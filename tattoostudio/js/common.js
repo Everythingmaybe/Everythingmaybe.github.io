@@ -7,24 +7,6 @@ $(function() {
 		});
 	};
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -78,12 +60,11 @@ $('#menuToggle, .menu-close').on('click', function(){
 
 // Scroll Button Top
 $(window).scroll(function() {
-	console.log($(this).height());
-	if ($(this).scrollTop() > ($(this).height())){
-		$('.button_top').css("display","block");
+	if ($(this).scrollTop() > $(this).height()){
+		$('.button_top').addClass('active');
 	}
 	else{
-		$('.button_top').css("display","none");
+		$('.button_top').removeClass('active');
 	}
 });
 			});

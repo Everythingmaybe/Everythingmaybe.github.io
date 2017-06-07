@@ -6,8 +6,8 @@ var slider = {
 	frame: Math.floor(Math.random() * placesarray.length),	//Рандом
 	set: function(image) { // установка нужного фона 
 		this.bgimg.style.backgroundImage = "url(images/img" + image + ".jpg)";
-		this.picleft.src = "url(images/img" + (--image) + ".jpg)";
-		this.picright.src = "url(images/img" + (++image) + ".jpg)";
+		this.picleft.src = "images/img" + (image-1) + ".jpg";
+		this.picright.src = "images/img" + (image+1) + ".jpg";
 	},
 	
 	init: function() {

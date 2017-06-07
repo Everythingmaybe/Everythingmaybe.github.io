@@ -1,0 +1,230 @@
+@import 'vars';
+@import 'fonts';
+@import 'media';
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+
+	font-family: $default-font;
+	font-size: 1em;
+	color: #fff;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-moz-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+
+	background-image: url('../images/img17.jpg');
+	background-position: center center;      
+	background-repeat: no-repeat;      
+	background-attachment: fixed;      
+	background-size: cover;      
+	background-color: #ABABAB;
+}
+/*GRID*/
+div {
+	border: 1px solid black;
+}
+
+.main-section {
+	-webkit-flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-moz-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+	text-transform: uppercase;
+	text-shadow: grey 0 0 10px;
+}
+
+.main-section > div {
+	
+}
+
+.info {
+	-webkit-flex-basis:60%;
+	-ms-flex-preferred-size:60%;
+	flex-basis:60%;
+	-webkit-box-ordinal-group:2;
+	-webkit-order:1;
+	-moz-box-ordinal-group:2;
+	-ms-flex-order:1;
+	order:1;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	text-align: center;
+}
+
+.info > img {
+	width: 150px;
+	opacity: 0.8;
+}
+
+.info > h1 {
+	font-size: 6em;
+	line-height: 0.6em;
+    -webkit-margin-before: 0.33em;
+    -webkit-margin-after: 0.33em;
+
+	strong {
+		color: $other-color;
+		text-shadow: red 0 0 10px;
+
+		&:hover {
+			text-shadow: black 0 0 30px;
+		}
+	}
+}
+
+.container-point {
+	border: 2px solid #fff;
+}
+
+.point-name {
+
+	&:hover {
+		background: #fff;
+    	color: #000;
+	}
+}
+
+.point-name > h2 {
+	font-size: 3em;
+	margin: 0;
+	padding: 0.3em;
+}
+
+.point-info {
+	display: none;
+	text-transform: uppercase;
+}
+
+.container-slide {
+	-webkit-flex-basis:20%;
+	-ms-flex-preferred-size:20%;
+	flex-basis:20%;
+	
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+
+    
+	font-weight: bold;
+	font-size: 10em;
+
+	opacity: 0.2;
+
+	&:hover {
+		opacity: 1;
+		text-shadow: #fff 0 0 10px;
+	}
+}
+
+.arrow-left, .arrow-right {
+	margin: auto;
+}
+
+.left {
+	-webkit-box-ordinal-group:1;
+	-webkit-order:0;
+	-moz-box-ordinal-group:1;
+	-ms-flex-order:0;
+	order:0;
+}
+
+.right {
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-moz-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+}
+
+.footer, .header {
+	-webkit-flex-basis:50px;
+	-ms-flex-preferred-size:50px;
+	flex-basis:50px;
+}

@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "poiret-one";
+  src: url("../fonts/PoiretOneRegular/PoiretOneRegular.eot?") format("eot"), url("../fonts/PoiretOneRegular/PoiretOneRegular.woff2") format("woff2"), url("../fonts/PoiretOneRegular/PoiretOneRegular.woff") format("woff"), url("../fonts/PoiretOneRegular/PoiretOneRegular.ttf") format("truetype"), url("../fonts/PoiretOneRegular/PoiretOneRegular.svg#poiret-one") format("svg");
+}
+/* line 5, ../sass/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/main.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* line 17, ../sass/main.scss */
+.wrapper {
+  height: 100%;
+  font-family: "poiret-one", cursive;
+  font-size: 1em;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-image: url("../images/img17.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #ABABAB;
+}
+
+/*GRID*/
+/* line 58, ../sass/main.scss */
+div {
+  border: 1px solid black;
+}
+
+/* line 62, ../sass/main.scss */
+.main-section {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-transform: uppercase;
+  text-shadow: grey 0 0 10px;
+}
+
+/* line 93, ../sass/main.scss */
+.info {
+  -webkit-flex-basis: 60%;
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 132, ../sass/main.scss */
+.info > img {
+  width: 150px;
+  opacity: 0.8;
+}
+
+/* line 137, ../sass/main.scss */
+.info > h1 {
+  font-size: 6em;
+  line-height: 0.6em;
+  -webkit-margin-before: 0.33em;
+  -webkit-margin-after: 0.33em;
+}
+/* line 143, ../sass/main.scss */
+.info > h1 strong {
+  color: #ffff00;
+  text-shadow: red 0 0 10px;
+}
+/* line 147, ../sass/main.scss */
+.info > h1 strong:hover {
+  text-shadow: black 0 0 30px;
+}
+
+/* line 153, ../sass/main.scss */
+.container-point {
+  border: 2px solid #fff;
+}
+
+/* line 159, ../sass/main.scss */
+.point-name:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* line 165, ../sass/main.scss */
+.point-name > h2 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0.3em;
+}
+
+/* line 171, ../sass/main.scss */
+.point-info {
+  display: none;
+  text-transform: uppercase;
+}
+
+/* line 176, ../sass/main.scss */
+.container-slide {
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 10em;
+  opacity: 0.2;
+}
+/* line 200, ../sass/main.scss */
+.container-slide:hover {
+  opacity: 1;
+  text-shadow: #fff 0 0 10px;
+}
+
+/* line 206, ../sass/main.scss */
+.arrow-left, .arrow-right {
+  margin: auto;
+}
+
+/* line 210, ../sass/main.scss */
+.left {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+/* line 218, ../sass/main.scss */
+.right {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+/* line 226, ../sass/main.scss */
+.footer, .header {
+  -webkit-flex-basis: 50px;
+  -ms-flex-preferred-size: 50px;
+  flex-basis: 50px;
+}

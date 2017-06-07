@@ -18,6 +18,7 @@ var slider = {
 				this.picleft.src = "images/img" + (image-1) + ".jpg";
 				this.picright.src = "images/img" + (image+1) + ".jpg";
 			}
+		this.addInfoPlace(image);
 	},
 	
 	init: function() {
@@ -34,11 +35,48 @@ var slider = {
 		this.frame++;
 		if(this.frame > this.len - 1) this.frame = 0;
 		this.set(this.frame);
-	}
+	},
+
+	addInfoPlace: function(a) {
+		var
+		nameplace = document.querySelector('.point-name > h2'),
+		infoplace = document.querySelector('.point-info > p');
+
+		nameplace.innerHTML = placesarray[a].imgName;
+		infoplace.innerHTML = placesarray[a].imgInfo;	
+	},
+
+	openInfoPlace: function() {
+		var
+		containerPlace = document.querySelector('.container-point'),
+		containerNameplace = document.querySelector('.point-name'),
+		containerInfoplace = document.querySelector('.point-info'),
+		logo = document.querySelector('.info > img'),
+		name = document.querySelector('.info > h1');
+
+		if (containerPlace.classList.contains('active')) {
+			containerPlace.classList.remove('active');
+			containerNameplace.classList.remove('active');
+			containerInfoplace.classList.remove('active');
+			logo.classList.remove('close');
+			name.classList.remove('close');
+		} else {
+			containerPlace.classList.add('active');
+			containerNameplace.classList.add('active');
+			containerInfoplace.classList.add('active');
+			logo.classList.add('close');
+			name.classList.add('close');
+		}
+	},
+
+	
+
 };
 
 window.onload = function() { // запуск слайдера после загрузки документа
-slider.init();
-alert(slider.picleft.src);
+	var
+	containerNameplace = document.querySelector('.point-name');
+	slider.init();
+	containerNameplace.onclick = slider.openInfoPlace;
 }
 

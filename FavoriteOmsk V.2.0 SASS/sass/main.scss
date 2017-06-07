@@ -16,10 +16,10 @@ html, body {
 
 .wrapper {
 	height: 100%;
-
+	cursor: default;
 	font-family: $default-font;
 	font-size: 1em;
-	color: #fff;
+	color: $main-color;
 
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -47,7 +47,6 @@ html, body {
 	-ms-flex-align: stretch;
 	align-items: stretch;
 
-	background-image: url('../images/img17.jpg');
 	background-position: center center;      
 	background-repeat: no-repeat;      
 	background-attachment: fixed;      
@@ -56,7 +55,7 @@ html, body {
 }
 /*GRID*/
 div {
-	border: 1px solid black;
+	border: 1px solid $second-color;
 }
 
 .main-section {
@@ -84,10 +83,6 @@ div {
 
 	text-transform: uppercase;
 	text-shadow: grey 0 0 10px;
-}
-
-.main-section > div {
-	
 }
 
 .info {
@@ -132,6 +127,10 @@ div {
 .info > img {
 	width: 150px;
 	opacity: 0.8;
+
+	&.close {
+		display: none;
+	}
 }
 
 .info > h1 {
@@ -140,27 +139,56 @@ div {
     -webkit-margin-before: 0.33em;
     -webkit-margin-after: 0.33em;
 
+    &.close {
+		display: none;
+	}
+
 	strong {
 		color: $other-color;
 		text-shadow: red 0 0 10px;
 
 		&:hover {
-			text-shadow: black 0 0 30px;
+			text-shadow: $second-color 0 0 30px;
 		}
 	}
 }
 
 .container-point {
-	border: 2px solid #fff;
+	border: 2px solid $main-color;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	
+	&.active {
+		width: 80%;
+		height: 70%;
+		border: none;
+	}
 }
 
 .point-name {
+	
 
 	&:hover {
-		background: #fff;
-    	color: #000;
+		background: $main-color;
+    	color: $second-color;
+	}
+
+	&.active {
+		border: 2px solid $main-color;
 	}
 }
+
 
 .point-name > h2 {
 	font-size: 3em;
@@ -171,6 +199,27 @@ div {
 .point-info {
 	display: none;
 	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.8);
+
+	-webkit-flex-basis:100%;
+	-ms-flex-preferred-size:100%;
+	flex-basis:100%;
+
+	&.active {
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -moz-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	}
+}
+
+.point-info > p {
+	font-size: 1.8em;
+	color: $second-color;
+	text-transform: none;
+	margin: auto 1em;
+	text-shadow: none;
 }
 
 .container-slide {
@@ -199,7 +248,7 @@ div {
 
 	&:hover {
 		opacity: 1;
-		text-shadow: #fff 0 0 10px;
+		text-shadow: $main-color 0 0 10px;
 	}
 }
 

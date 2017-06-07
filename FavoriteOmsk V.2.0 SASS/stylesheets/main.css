@@ -19,9 +19,10 @@ html, body {
 /* line 17, ../sass/main.scss */
 .wrapper {
   height: 100%;
+  cursor: default;
   font-family: "poiret-one", cursive;
   font-size: 1em;
-  color: #fff;
+  color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -44,7 +45,6 @@ html, body {
   -moz-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-image: url("../images/img17.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -53,12 +53,12 @@ html, body {
 }
 
 /*GRID*/
-/* line 58, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 div {
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
-/* line 62, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .main-section {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -82,7 +82,7 @@ div {
   text-shadow: grey 0 0 10px;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .info {
   -webkit-flex-basis: 60%;
   -ms-flex-preferred-size: 60%;
@@ -117,54 +117,105 @@ div {
   text-align: center;
 }
 
-/* line 132, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 .info > img {
   width: 150px;
   opacity: 0.8;
 }
+/* line 131, ../sass/main.scss */
+.info > img.close {
+  display: none;
+}
 
-/* line 137, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .info > h1 {
   font-size: 6em;
   line-height: 0.6em;
   -webkit-margin-before: 0.33em;
   -webkit-margin-after: 0.33em;
 }
-/* line 143, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
+.info > h1.close {
+  display: none;
+}
+/* line 146, ../sass/main.scss */
 .info > h1 strong {
   color: #ffff00;
   text-shadow: red 0 0 10px;
 }
-/* line 147, ../sass/main.scss */
+/* line 150, ../sass/main.scss */
 .info > h1 strong:hover {
-  text-shadow: black 0 0 30px;
+  text-shadow: #000000 0 0 30px;
 }
 
-/* line 153, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 .container-point {
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/* line 172, ../sass/main.scss */
+.container-point.active {
+  width: 80%;
+  height: 70%;
+  border: none;
 }
 
-/* line 159, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 .point-name:hover {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
+}
+/* line 187, ../sass/main.scss */
+.point-name.active {
+  border: 2px solid #ffffff;
 }
 
-/* line 165, ../sass/main.scss */
+/* line 193, ../sass/main.scss */
 .point-name > h2 {
   font-size: 3em;
   margin: 0;
   padding: 0.3em;
 }
 
-/* line 171, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .point-info {
   display: none;
   text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+/* line 208, ../sass/main.scss */
+.point-info.active {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-/* line 176, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
+.point-info > p {
+  font-size: 1.8em;
+  color: #000000;
+  text-transform: none;
+  margin: auto 1em;
+  text-shadow: none;
+}
+
+/* line 225, ../sass/main.scss */
 .container-slide {
   -webkit-flex-basis: 20%;
   -ms-flex-preferred-size: 20%;
@@ -183,18 +234,18 @@ div {
   font-size: 10em;
   opacity: 0.2;
 }
-/* line 200, ../sass/main.scss */
+/* line 249, ../sass/main.scss */
 .container-slide:hover {
   opacity: 1;
-  text-shadow: #fff 0 0 10px;
+  text-shadow: #ffffff 0 0 10px;
 }
 
-/* line 206, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 .arrow-left, .arrow-right {
   margin: auto;
 }
 
-/* line 210, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 .left {
   -webkit-box-ordinal-group: 1;
   -webkit-order: 0;
@@ -203,7 +254,7 @@ div {
   order: 0;
 }
 
-/* line 218, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 .right {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
@@ -212,7 +263,7 @@ div {
   order: 2;
 }
 
-/* line 226, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 .footer, .header {
   -webkit-flex-basis: 50px;
   -ms-flex-preferred-size: 50px;

@@ -25,13 +25,13 @@ var slider = {
 	},
 
 	left: function() {
-		--this.frame;
+		this.frame--;
 		if(this.frame < 0) this.frame = --this.len;
 		this.set(this.frame);
 	},
 
 	right: function() {
-		--this.frame;
+		this.frame++;
 		if(this.frame > this.len - 1) this.frame = 0;
 		this.set(this.frame);
 	}

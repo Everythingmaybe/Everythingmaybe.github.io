@@ -1,6 +1,10 @@
 @import 'vars';
 @import 'fonts';
-@import 'media';
+
+/*mixin transition*/
+@mixin sample {
+    
+}
 
 * {
 	-webkit-box-sizing: border-box;
@@ -12,6 +16,11 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
+}
+
+/*GRID borders*/
+div {
+	border: 1px solid $second-color;
 }
 
 .wrapper {
@@ -53,9 +62,11 @@ html, body {
 	background-size: cover;      
 	background-color: #ABABAB;
 }
-/*GRID*/
-div {
-	border: 1px solid $second-color;
+
+.header {
+	-webkit-flex-basis:50px;
+	-ms-flex-preferred-size:50px;
+	flex-basis:50px;
 }
 
 .main-section {
@@ -272,8 +283,30 @@ div {
 	order: 2;
 }
 
-.footer, .header {
-	-webkit-flex-basis:50px;
-	-ms-flex-preferred-size:50px;
-	flex-basis:50px;
+.container-footer {
+	-webkit-flex-basis:80px;
+	-ms-flex-preferred-size:80px;
+	flex-basis:80px;
 }
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding:3px;
+	background-color: rgba(0,0,0,0.3);
+	text-transform: none;
+	color: $main-color;
+	text-align: center;
+	p {
+		margin: 0;
+	}
+
+	a {
+		color:#78DBE2;
+		text-decoration:none;
+	}
+}
+
+@import 'media';

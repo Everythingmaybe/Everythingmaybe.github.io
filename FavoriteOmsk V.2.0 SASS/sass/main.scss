@@ -1,10 +1,6 @@
 @import 'vars';
 @import 'fonts';
 
-/*mixin transition*/
-@mixin sample {
-    
-}
 
 * {
 	-webkit-box-sizing: border-box;
@@ -19,9 +15,9 @@ html, body {
 }
 
 /*GRID borders*/
-div {
+/*div {
 	border: 1px solid $second-color;
-}
+}*/
 
 .wrapper {
 	height: 100%;
@@ -61,6 +57,10 @@ div {
 	background-attachment: fixed;      
 	background-size: cover;      
 	background-color: #ABABAB;
+	-webkit-transition: background $time-transition ease;
+	-o-transition: background $time-transition ease;
+	-moz-transition: background $time-transition ease;
+	transition: background $time-transition ease; 
 }
 
 .header {
@@ -157,6 +157,10 @@ div {
 	strong {
 		color: $other-color;
 		text-shadow: red 0 0 10px;
+		-webkit-transition: text-shadow 2s;
+		-o-transition: text-shadow 2s;
+		-moz-transition: text-shadow 2s;
+		transition: text-shadow 2s;
 
 		&:hover {
 			text-shadow: $second-color 0 0 30px;
@@ -182,13 +186,20 @@ div {
 	
 	&.active {
 		width: 80%;
-		height: 70%;
+		height: 75%;
 		border: none;
 	}
 }
 
 .point-name {
-	
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	-webkit-transition-property: text-shadow, color, background-color;
+	-o-transition-property: text-shadow, color, background-color;
+	-moz-transition-property: text-shadow, color, background-color;
+	transition-property: text-shadow, color, background-color;
 
 	&:hover {
 		background: $main-color;
@@ -231,6 +242,11 @@ div {
 	text-transform: none;
 	margin: auto 1em;
 	text-shadow: none;
+
+	&:first-letter {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
 }
 
 .container-slide {
@@ -256,6 +272,14 @@ div {
 	font-size: 10em;
 
 	opacity: 0.2;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	-webkit-transition-property: opacity, text-shadow;
+	-o-transition-property: opacity, text-shadow;
+	-moz-transition-property: opacity, text-shadow;
+	transition-property: opacity, text-shadow;
 
 	&:hover {
 		opacity: 1;

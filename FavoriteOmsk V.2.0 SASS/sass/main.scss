@@ -23,7 +23,7 @@ html, body {
 	height: 100%;
 	cursor: default;
 	font-family: $default-font;
-	font-size: 1em;
+	font-size: 16px;
 	color: $main-color;
 
 	display: -webkit-box;
@@ -136,7 +136,8 @@ html, body {
 }
 
 .info > img {
-	width: 150px;
+	mix-width: 85px;
+	max-width: 150px;
 	opacity: 0.8;
 
 	&.close {
@@ -227,6 +228,8 @@ html, body {
 	-ms-flex-preferred-size:100%;
 	flex-basis:100%;
 
+	overflow: auto;
+
 	&.active {
 		display: -webkit-inline-box;
 		display: -webkit-inline-flex;
@@ -240,7 +243,8 @@ html, body {
 	font-size: 1.8em;
 	color: $second-color;
 	text-transform: none;
-	margin: auto 1em;
+	padding: 0 1em;
+	margin: auto;
 	text-shadow: none;
 
 	&:first-letter {
@@ -314,6 +318,7 @@ html, body {
 }
 
 .footer {
+	font-size: 1.1em;
 	position: absolute;
 	bottom: 0;
 	left: 0;

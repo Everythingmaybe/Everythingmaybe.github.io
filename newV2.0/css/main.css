@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "BigJohn";
+  src: url("../fonts/BigJohn/BIGJOHN.eot?") format("eot"), url("../fonts/BigJohn/BIGJOHN.woff2") format("woff2"), url("../fonts/BigJohn/BIGJOHN.woff") format("woff"), url("../fonts/BigJohn/BIGJOHN.ttf") format("truetype"), url("../fonts/BigJohn/BIGJOHN.svg#BigJohn") format("svg"); }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSansRegular.eot?") format("eot"), url("../fonts/OpenSans/OpenSansRegular.woff2") format("woff2"), url("../fonts/OpenSans/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSans/OpenSansRegular.ttf") format("truetype"), url("../fonts/OpenSans/OpenSansRegular.svg#OpenSans") format("svg"); }
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../fonts/SourceSansPro/SourceSansPro.eot?") format("eot"), url("../fonts/SourceSansPro/SourceSansPro.woff2") format("woff2"), url("../fonts/SourceSansPro/SourceSansPro.woff") format("woff"), url("../fonts/SourceSansPro/SourceSansPro.ttf") format("truetype"), url("../fonts/SourceSansPro/SourceSansPro.svg#SourceSansPro") format("svg"); }
+
+@font-face {
+  font-family: "Pe-icon-7-stroke";
+  src: url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.eot?") format("eot"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.woff2") format("woff2"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.woff") format("woff"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.ttf") format("truetype"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.svg#Pe-icon-7-stroke") format("svg"); }
+
+html, body, header, .header {
+  height: 100%; }
+
+html {
+  overflow-x: hidden; }
+
+body {
+  color: #fff;
+  font-family: "OpenSans";
+  font-size: 16px;
+  background-color: #f3f3f3; }
+
+p {
+  letter-spacing: 0.05em; }
+
+a {
+  text-decoration: none; }
+  a.button {
+    padding: 0.4em 0.625em;
+    border: 1px solid rgba(255, 255, 255, 0);
+    -webkit-border-radius: 3em;
+            border-radius: 3em;
+    color: #fff; }
+    a.button:hover {
+      border-color: #fff;
+      color: #fff; }
+    a.button.dark, a.button.white {
+      padding-right: 1.875em;
+      padding-left: 1.875em;
+      line-height: 85px; }
+    a.button.dark {
+      border-color: #333b46;
+      color: #333b46; }
+    a.button.white {
+      border-color: #fff;
+      color: #fff; }
+  a:hover {
+    text-decoration: none; }
+
+.h2.inverse, .h3.inverse, .h4.inverse {
+  color: #fff; }
+
+.h2, .h3 {
+  font-family: "SourceSansPro";
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  text-transform: uppercase; }
+
+.h2 {
+  font-size: 2.19em;
+  line-height: 2;
+  margin-bottom: 0.45em; }
+
+.h3 {
+  font-size: 1.25em;
+  line-height: 0.6;
+  color: #333b46;
+  margin-bottom: 2.5em; }
+
+.h4 {
+  font-size: 1.25em;
+  color: #464646;
+  letter-spacing: 0.04em;
+  font-weight: normal; }
+
+header {
+  background-image: url("../img/header_background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.header {
+  background-color: rgba(32, 34, 36, 0.5); }
+
+.section-white, .section-opacity, .section {
+  padding: 70px 0 60px; }
+  .section-white p, .section-opacity p, .section p {
+    color: #81868e;
+    margin-bottom: 2em; }
+    .section-white p.small, .section-opacity p.small, .section p.small {
+      font-size: 0.875em; }
+    .section-white p.upper, .section-opacity p.upper, .section p.upper {
+      text-transform: uppercase; }
+
+.section-white {
+  background-color: #fff; }
+
+.section, .s-footer {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.section {
+  color: #fff;
+  background-color: #333b46; }
+
+.nav {
+  margin-top: 3em; }
+  .nav ul {
+    float: right;
+    display: inline;
+    list-style-type: none;
+    padding: 0; }
+    .nav ul li {
+      display: inline-block; }
+      .nav ul li a:hover {
+        padding-left: 1.25em;
+        padding-right: 1.25em; }
+
+.logo {
+  font-family: "BigJohn";
+  font-size: 1.56em;
+  position: relative;
+  z-index: 1; }
+
+.header-center {
+  margin: 19vh 0;
+  text-align: center; }
+  .header-center p {
+    line-height: 1.25;
+    margin: 0 23%; }
+
+.section-center {
+  text-align: center; }
+
+.inline-icons {
+  text-align: center;
+  background-color: #81868e;
+  display: inline-block;
+  margin: 7px 14px;
+  width: 53px;
+  height: 53px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+  .inline-icons i {
+    font-size: 30px;
+    line-height: 55px; }
+  .inline-icons:hover {
+    background-color: #19BD9A; }
+
+.s-featured .notpadding {
+  padding: 0; }
+
+.img-fluid {
+  width: 100%;
+  height: 320px;
+  background-color: #19BD9A;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
+  .img-fluid.one {
+    background-image: url("../img/featured1.png"); }
+  .img-fluid.two {
+    background-image: url("../img/featured2.png"); }
+  .img-fluid.three {
+    background-image: url("../img/featured3.png"); }
+  .img-fluid:hover {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); }
+  .img-fluid .pattern {
+    height: 100%;
+    background-color: rgba(22, 46, 43, 0.85); }
+    .img-fluid .pattern .h3 {
+      text-align: center;
+      color: #fff;
+      line-height: 320px; }
+    .img-fluid .pattern:hover {
+      background-color: rgba(22, 46, 43, 0); }
+
+.s-footer {
+  position: relative;
+  background-color: #19BD9A;
+  background-image: url("../img/layer 85.png"); }
+
+.img {
+  position: absolute;
+  left: -130px;
+  top: -110px;
+  z-index: 0; }
+
+.item {
+  padding-bottom: 15px; }
+  .item img {
+    max-width: 100%; }
+  .item .img-info {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    height: -webkit-calc(100% - 15px);
+    height: calc(100% - 15px);
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0; }
+    .item .img-info:hover {
+      opacity: 1; }

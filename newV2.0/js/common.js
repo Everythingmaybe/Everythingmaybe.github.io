@@ -5,6 +5,7 @@ $(function() {
 			columnWidth: ".item",
 			itemSelector: ".item",
 			horizontalOrder: true,
+			//gutter: 10,
 		});
 	});
 });

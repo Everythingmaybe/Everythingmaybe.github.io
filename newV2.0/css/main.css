@@ -30,7 +30,8 @@ p {
   letter-spacing: 0.05em; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   a.button {
     padding: 0.4em 0.625em;
     border: 1px solid rgba(255, 255, 255, 0);
@@ -57,7 +58,7 @@ a {
   z-index: 1;
   position: relative; }
 
-.h2.inverse, .h3.inverse, .h4.inverse {
+.h2.inverse, .h3.inverse, .h4.inverse, .h5.inverse, .h6.inverse {
   color: #fff; }
 
 .h2, .h3 {
@@ -83,6 +84,23 @@ a {
   letter-spacing: 0.04em;
   font-weight: normal;
   margin-bottom: 0em; }
+
+.h5 {
+  font-size: 1em;
+  color: #81868e;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+
+.h6 {
+  font-size: 0.875em;
+  color: #81868e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+  margin-top: 0.835em;
+  font-style: italic; }
 
 header {
   background-image: url("../img/header_background.png");
@@ -128,9 +146,13 @@ header {
     padding: 0; }
     .nav ul li {
       display: inline-block; }
-      .nav ul li a:hover {
-        padding-left: 1.25em;
-        padding-right: 1.25em; }
+      .nav ul li a {
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+        .nav ul li a:hover {
+          padding-left: 1.25em;
+          padding-right: 1.25em; }
 
 .logo {
   font-family: "BigJohn";
@@ -156,7 +178,10 @@ header {
   width: 53px;
   height: 53px;
   -webkit-border-radius: 50%;
-          border-radius: 50%; }
+          border-radius: 50%;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all; }
   .inline-icons i {
     font-size: 30px;
     line-height: 55px; }
@@ -166,11 +191,19 @@ header {
 .s-featured .notpadding {
   padding: 0; }
 
-.table {
-  display: table; }
+.hover-block .col-xs-4 {
+  -webkit-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s; }
+
+.hover-block:hover .col-xs-4:not(:hover) {
+  width: 25%; }
+
+.hover-block .col-xs-4:hover {
+  width: 50%; }
 
 .img-fluid {
-  display: table-cell;
+  display: block;
   position: relative;
   min-width: 100%;
   height: 20em;
@@ -179,18 +212,21 @@ header {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  text-align: center;
-  vertical-align: middle; }
+  text-align: center; }
   .img-fluid .img-title {
     position: relative;
-    z-index: 1; }
-  .img-fluid .h3 {
-    color: #fff; }
-  .img-fluid:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%); }
+    z-index: 1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
+    .img-fluid .img-title:hover {
+      -webkit-filter: grayscale(0%);
+              filter: grayscale(0%);
+      background-color: transparent; }
+    .img-fluid .img-title .h3 {
+      color: #fff;
+      line-height: 16em; }
 
 .s-pattern {
   position: absolute;
@@ -215,7 +251,7 @@ header {
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.img {
+.monitor {
   position: absolute;
   left: -130px;
   top: -110px;
@@ -238,15 +274,24 @@ header {
     width: calc(100% - 10px);
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transition: 1s all;
+    -o-transition: 1s all;
+    transition: 1s all;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5); }
     .item .img-info:hover {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
 
 button, input[type=text] {
   width: 100%;
   font-size: 14px; }
   button:focus, input[type=text]:focus {
-    outline: #fff auto 5px; }
+    outline: #fff auto 2px; }
 
 button {
   max-width: 15%;
@@ -261,3 +306,31 @@ input[type=text] {
   border: 1px solid #81868e;
   margin-right: 10px;
   padding: 15px 20px; }
+
+.name-team-persone, .info-team-persone {
+  padding-right: 45px;
+  text-align: right; }
+
+.name-team-persone {
+  border-right: 5px solid #19BD9A; }
+
+.bars-team-persone {
+  padding: 0 45px;
+  margin-top: -20px; }
+  .bars-team-persone .bar .progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #e1e4e9; }
+    .bars-team-persone .bar .progress-bar .progress {
+      height: 5px;
+      background-color: #19BD9A; }
+  .bars-team-persone progress {
+    width: 100%; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+/******************SLIDER***************/

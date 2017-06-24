@@ -1,10 +1,12 @@
 var slider = {
+	piccenter: new Image(),
 	picleft: new Image(),			//Для предварительной загрузки
 	picright: new Image(),			//рядом стоящих картинок
 	len: placesarray.length,
 	bgimg: document.querySelector('.wrapper'),				//Объект у которого меняем фон
 	frame: Math.floor(Math.random() * placesarray.length),	//Рандом
 	set: function(image) { // установка нужного фона 
+		slider.piccenter.src = "images/img" + image + ".jpg";
 		slider.bgimg.style.backgroundImage = "url(images/img" + image + ".jpg)";
 		if (image == 0) {
 			 slider.picleft.src = "images/img" + (slider.len-1) + ".jpg"

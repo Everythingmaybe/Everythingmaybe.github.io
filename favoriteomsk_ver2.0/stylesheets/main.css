@@ -54,10 +54,10 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #ABABAB;
-  -webkit-transition: background 1.5s ease;
-  -o-transition: background 1.5s ease;
-  -moz-transition: background 1.5s ease;
-  transition: background 1.5s ease;
+  -webkit-transition: background 1s ease;
+  -o-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  transition: background 1s ease;
 }
 
 /* line 66, ../sass/main.scss */

@@ -77,9 +77,19 @@ window.onload = function() {
 	var
 	containerNameplace = document.querySelector('.point-name'),
 	rightSlide = document.querySelector('.right'),
-	leftSlide = document.querySelector('.left');
+	leftSlide = document.querySelector('.left'),
+	wrapper = document.querySelector('.wrapper');
 	
 	slider.init();							// запуск слайдера после загрузки документа
+
+	/* Прелоудер */
+	var fps = 50, // 50 кадров в секунду
+		opacity = + wrapper.style.opacity;
+	var timer = setInterval(function() {
+		if (opacity == 1) clearInterval(timer);
+		else {opacity += (0.02);
+			wrapper.style.opacity = opacity} 
+	}, 1000 / fps)
 	
 	/*Переключание слайда по клику*/
 	rightSlide.addEventListener("click", slider.right); 				

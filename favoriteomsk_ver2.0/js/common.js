@@ -6,7 +6,6 @@ var slider = {
 	bgimg: document.querySelector('.wrapper'),				//Объект у которого меняем фон
 	frame: Math.floor(Math.random() * placesarray.length),	//Рандом
 	set: function(image) { // установка нужного фона 
-		slider.piccenter.src = "images/img" + image + ".jpg";
 		slider.bgimg.style.backgroundImage = "url(images/img" + image + ".jpg)";
 		if (image == 0) {
 			 slider.picleft.src = "images/img" + (slider.len-1) + ".jpg"
@@ -75,20 +74,21 @@ var slider = {
 
 };
 
+document.addEventListener("DOMContentLoaded", slider.init);// запуск слайдера после загрузки DOM
+
 window.onload = function() { 
 	var
 	containerNameplace = document.querySelector('.point-name'),
 	rightSlide = document.querySelector('.right'),
 	leftSlide = document.querySelector('.left'),
 	wrapper = document.querySelector('.wrapper');
-	
-	slider.init();							// запуск слайдера после загрузки документа
+				
 
 	/* Прелоудер */
 	var fps = 50, // 50 кадров в секунду
 		opacity = + wrapper.style.opacity;
 	var timer = setInterval(function() {
-		if (opacity == 1) clearInterval(timer);
+		if (opacity >= 1) clearInterval(timer);
 		else {opacity += (0.02);
 			wrapper.style.opacity = opacity} 
 	}, 1000 / fps)

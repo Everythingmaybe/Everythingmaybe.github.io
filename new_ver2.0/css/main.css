@@ -22,6 +22,70 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto.eot?") format("eot"), url("../fonts/Roboto/Roboto.woff2") format("woff2"), url("../fonts/Roboto/Roboto.woff") format("woff"), url("../fonts/Roboto/Roboto.ttf") format("truetype"), url("../fonts/Roboto/Roboto.svg#Roboto") format("svg"); }
 
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .slider1, .slider2 {
+    font-size: 12px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  h3.h3 {
+    line-height: 1; }
+  .slider1 {
+    font-size: 9px;
+    height: 300px; }
+    .slider1 .name-team-persone, .slider1 .info-team-persone, .slider1 .bars-team-persone {
+      padding-right: 10px; }
+  .slider2 {
+    font-size: 10px; }
+  .slider3 {
+    font-size: 12px;
+    max-height: 460px; }
+  .contact-section .contact-block {
+    margin: 0; }
+  .form input[type=text], .form button {
+    width: 96%; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  header .header-center {
+    margin-top: 10vh; }
+    header .header-center p {
+      font-size: 14px; }
+  .slider1 {
+    font-size: 8px;
+    height: 230px; } }
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
+
 html, body, header, .header {
   height: 100%; }
 
@@ -312,7 +376,7 @@ nav.fixed {
 .mobile-nav {
   position: absolute;
   top: -5px;
-  right: -35px; }
+  right: -25px; }
   .mobile-nav button {
     font-size: 50px;
     background-color: transparent; }
@@ -356,7 +420,7 @@ nav.fixed {
     color: #000; }
 
 .header-center {
-  margin: 19vh 0;
+  margin-top: 19vh;
   text-align: center; }
   .header-center p {
     line-height: 1.25; }
@@ -497,8 +561,9 @@ nav.fixed {
 .float-right {
   float: right; }
 
-.slider1 {
-  height: 470px; }
+.slider1 img {
+  width: 285px;
+  max-width: 120%; }
 
 .slider2 {
   height: 320px; }

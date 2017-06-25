@@ -1,0 +1,102 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	/**/
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	/**/
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+	.slider1, .slider2 {
+		font-size: 12px;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	h3.h3 {
+		line-height: 1;
+	}
+	.slider1 {
+		font-size: 9px;
+		height: 300px;
+		.name-team-persone, .info-team-persone, .bars-team-persone {
+			padding-right: 10px;
+		}
+	}
+
+	.slider2 {
+		font-size: 10px;
+	}
+
+	.slider3 {
+		font-size: 12px;
+		max-height: 460px;
+	}
+
+	.contact-section .contact-block {
+		margin: 0;
+	}
+
+	.form input[type=text], .form button {
+		width: 96%;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	header .header-center{
+		margin-top: 10vh;
+
+		p {
+			font-size: 14px;
+		}
+	}
+
+	.slider1 {
+		font-size: 8px;
+		height: 230px;
+	}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	/**/
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	/**/
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	/**/
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	/**/
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	/**/
+}
+

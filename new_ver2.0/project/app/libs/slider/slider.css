@@ -1,0 +1,113 @@
+.da-slider{
+	z-index:1;
+	width: 100%;
+	min-width: 320px;
+	height: 420px;
+	position: relative;
+	margin: 30px auto;
+	overflow-x: hidden;
+	background: #fff;
+	-webkit-transition: background-position 1.4s ease-in-out 0.3s;
+	-moz-transition: background-position 1.4s ease-in-out 0.3s;
+	-o-transition: background-position 1.4s ease-in-out 0.3s;
+	-ms-transition: background-position 1.4s ease-in-out 0.3s;
+	transition: background-position 1.4s ease-in-out 0.3s;
+}
+
+.da-slide{
+	z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	background-color: #fff;
+}
+.da-slide-current{
+	z-index: 1000 ;
+}
+.da-slider-fb .da-slide{
+	left: 100%;
+}
+.da-slider-fb  .da-slide.da-slide-current{
+	left: 0px;
+}
+
+.da-dots{
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	left: 0px;
+	bottom: 5px;
+	z-index: 2000;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.da-dots span{
+	display: inline-block;
+	position: relative;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: transparent;
+	margin: 3px;
+	cursor: pointer;
+	border: 2px solid #19BD9A;
+}
+
+.da-dots span.da-dots-current {
+	background-color: #19BD9A;
+}
+
+.da-dots span.da-dots-current:after{
+	content: '';
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 50%;
+	background: #19BD9A;
+}
+
+.da-slide-fromright *{
+	animation: fromRightAnim4 0.6s ease-in-out 0.2s both;
+}
+
+@keyframes fromRightAnim4{
+	0%{ left: 110%; }
+	80%{ left: -1%; }
+	100%{ left: 0%; }
+}
+
+.da-slide-fromleft *{
+	animation: fromLeftAnim4 0.6s ease-in-out both;
+}
+
+@keyframes fromLeftAnim4{
+	0%{ left: -110%; }
+	100%{ left: 0%; }
+}
+
+.da-slide-toright *{
+	animation: toRightAnim4 0.6s ease-in-out both;
+}
+
+@keyframes toRightAnim4{
+	0%{ left: 0%;  }
+	30%{ left: 80%;  }
+	100%{ left: 110%; }
+}
+
+.da-slide-toleft *{
+	animation: toLeftAnim4 0.6s ease-in-out both;
+}
+
+@keyframes toLeftAnim4{
+	0%{ left: 0%;  }
+	70%{ left: -20%;  }
+	100%{ left: -110%; }
+}
+
+/************************SLIDER 3**************************/

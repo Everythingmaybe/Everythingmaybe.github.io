@@ -1,0 +1,9 @@
+@import '_mixins/font-face';
+
+
+@include font-face(BigJohn, '../fonts/BigJohn/BIGJOHN');
+@include font-face(OpenSans, '../fonts/OpenSans/OpenSansRegular');
+@include font-face(SourceSansPro, '../fonts/SourceSansPro/SourceSansPro');
+@include font-face(SourceSansProBlack, '../fonts/SourceSansPro/sourcesanspro.black');
+@include font-face(Pe-icon-7-stroke, '../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke');
+@include font-face(Roboto, '../fonts/Roboto/Roboto');

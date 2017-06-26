@@ -91,9 +91,6 @@ img {
 .float-r {
   float: right; }
 
-.border-b {
-  border-bottom: 2px solid #2e3548; }
-
 .contact {
   display: inline-block;
   vertical-align: middle;

@@ -6,27 +6,12 @@
   font-family: "Pe-icon-7-stroke";
   src: url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.eot?") format("eot"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.woff2") format("woff2"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.woff") format("woff"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.ttf") format("truetype"), url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.svg#Pe-icon-7-stroke") format("svg"); }
 
-@media only screen and (max-width: 500px) {
-  body .wrapper {
-    width: 100%;
-    margin-right: 0%;
-    margin-left: 0%; }
-  body .section {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%; }
-  body .header {
-    width: 100%; } }
-
-@media only screen and (max-width: 350px) {
-  .container-skills img {
-    width: 70%; } }
-
-html, body {
-  height: 100%;
-  margin: 0;
-  background-color: white; }
-
+/*html, body {
+	height: 100%;
+	margin: 0;
+	background-color: white;
+}
+*/
 body {
   font-family: "Reef";
   font-size: 16px; }
@@ -39,24 +24,24 @@ p b {
   p b.big {
     font-size: 22px; }
 
-.wrapper {
-  background-color: white;
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
-  border: 1px solid #EDEDED;
-  overflow-x: hidden;
-  color: #2e3548; }
-
+/*.wrapper {
+	background-color: white;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	border: 1px solid #EDEDED;
+	overflow-x: hidden;
+	color: $dark-color;
+}*/
 .section {
   margin: 20px 0; }
 
-.header {
-  padding: 20px;
-  background-color: #2e3548;
-  color: #00ced1;
-  text-align: center; }
-
+/*.header {
+	padding: 20px;
+	background-color: $dark-color;
+	color: $select-color;
+	text-align: center;
+}*/
 .title {
   font-size: 30px;
   height: 1em;
@@ -119,3 +104,19 @@ img {
   height: 130px; }
   .skills ul li {
     text-align: left; }
+
+@media only screen and (max-width: 500px) {
+  body .wrapper {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%; }
+  body .section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  body .header {
+    width: 100%; } }
+
+@media only screen and (max-width: 350px) {
+  .container-skills img {
+    width: 70%; } }

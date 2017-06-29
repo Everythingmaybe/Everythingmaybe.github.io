@@ -36,8 +36,7 @@ body {
     left: -webkit-calc(50% - (596px / 2));
     left: calc(50% - (596px / 2));
     width: 596px;
-    height: 360px;
-    padding: 10px 35px;
+    padding: 10px 35px 20px;
     background-color: #353436; }
     .modal-window .area-reserv .cross {
       position: absolute;
@@ -73,6 +72,10 @@ body {
         font-family: "Playfair Display", serif;
         font-weight: bold;
         text-transform: uppercase; }
+      .modal-window .area-reserv .block .block-form > span {
+        display: none; }
+        .modal-window .area-reserv .block .block-form > span a {
+          color: #fff; }
       .modal-window .area-reserv .block .block-form form button {
         width: 185px;
         height: 33px;
@@ -141,12 +144,17 @@ header {
       right: 0;
       bottom: 0;
       font-size: 18px; }
+      header .header-content .menu .trigger-menu {
+        display: none; }
       header .header-content .menu .nav > li > a:active {
         color: #e2d1a6;
         font-weight: bold; }
       header .header-content .menu ul.nav {
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        background-color: #353436; }
+        header .header-content .menu ul.nav.open-nav {
+          display: block; }
         header .header-content .menu ul.nav li {
           float: left;
           display: block;
@@ -168,7 +176,8 @@ header {
         left: 0;
         padding: 0;
         padding-top: 25px;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        z-index: 100; }
         header .header-content .menu .sub-menu li {
           float: none;
           width: 100%; }
@@ -278,12 +287,12 @@ main .main-content {
 
 .footer {
   width: 1250px;
+  max-width: 100%;
   background-color: #353436;
   color: #fff;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
-  line-height: 24px;
-  text-align: left; }
+  line-height: 24px; }
   .footer .footer-content {
     position: relative; }
     .footer .footer-content form button {
@@ -319,16 +328,23 @@ main .main-content {
         vertical-align: top;
         font-size: 11.97px;
         font-weight: lighter;
-        line-height: 17.4px; }
-    .footer .footer-content .bot-section .soc-container {
-      margin-left: 15%;
-      display: inline-block; }
-      .footer .footer-content .bot-section .soc-container a {
-        margin-right: 10px; }
-        .footer .footer-content .bot-section .soc-container a img {
-          display: inline-block; }
+        line-height: 17.4px;
+        text-align: left; }
+    .footer .footer-content .bot-section {
+      text-align: left; }
+      .footer .footer-content .bot-section .soc-container {
+        margin-left: 15%;
+        display: inline-block;
+        width: 80px;
+        height: 24px;
+        line-height: 2; }
+        .footer .footer-content .bot-section .soc-container a {
+          margin-right: 10px; }
+          .footer .footer-content .bot-section .soc-container a img {
+            display: inline-block; }
     .footer .footer-content .contact-info {
-      display: inline-block; }
+      display: inline-block;
+      text-align: center; }
       .footer .footer-content .contact-info .contact-blocks .cont-block {
         display: inline-block;
         font-size: 12px;
@@ -362,35 +378,124 @@ main .main-content {
           content: "";
           padding: 0; }
 
-@media only screen and (max-width: 1150px) {
-  footer center .footer .footer-content .footer-blocks .info-block.three {
-    display: none; }
-  footer center .footer {
-    width: 999px; }
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1266px) {
+  /**/
+  .footer .footer-content .footer-blocks .info-block {
+    margin: 0 2%; }
+  .footer .footer-content .footer-blocks {
+    margin: 6px 0; }
   .footer .footer-content .bot-section .soc-container {
-    margin-left: 0; } }
+    margin-left: 2.3%; } }
 
-@media only screen and (max-width: 900px) {
-  footer center .footer .footer-content .footer-blocks .info-block.two {
-    display: none; }
-  footer center .footer {
-    width: 750px; }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /*Main*/
   main .main-content .open-section .info-section .title {
-    font-size: 22px; } }
-
-@media only screen and (max-width: 650px) {
-  footer center .footer .footer-content .footer-blocks .info-block.one {
-    display: none; }
-  footer center .footer {
+    font-size: 24px; }
+  main .main-content .slider .info-slide {
     width: 490px; }
-  main .main-content .open-section .info-section .title {
-    font-size: 20px; } }
-
-@media only screen and (max-width: 550px) {
-  header .header-content .logo {
-    width: 35%;
-    margin-bottom: 35px; }
-  header .header-content .menu ul.nav li {
+  main .main-content .slider .info-slide .title {
+    font-size: 26px; }
+  main .main-content .slider .info-slide .info {
     font-size: 16px; }
+  /*Footer*/
+  .footer .footer-content .bot-section .soc-container {
+    margin-left: 0; }
+  .footer .footer-content .footer-blocks .info-block.three {
+    display: none; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /*Main*/
   main .main-content .open-section .info-section .title {
-    font-size: 18px; } }
+    font-size: 19px;
+    height: 90px; }
+  main .main-content .open-section .info-section .info {
+    font-size: 14px; }
+  main .main-content .slider .info-slide {
+    width: 415px; }
+  main .main-content .slider .info-slide .title {
+    font-size: 23px; }
+  main .main-content .slider .info-slide .info {
+    font-size: 14px; } }
+
+/* Trigger menu */
+@media only screen and (max-width: 600px) {
+  /* Modal Window */
+  .modal-window .area-reserv {
+    left: -webkit-calc(50% - (298px / 2));
+    left: calc(50% - (298px / 2));
+    width: 298px;
+    text-align: center; }
+    .modal-window .area-reserv .block {
+      margin: 0; }
+      .modal-window .area-reserv .block .block-form > span {
+        display: inline-block; }
+      .modal-window .area-reserv .block.accedi {
+        display: none; }
+        .modal-window .area-reserv .block.accedi.log-open {
+          display: inline-block; }
+      .modal-window .area-reserv .block.reg.reg-close {
+        display: none; }
+      .modal-window .area-reserv .block form {
+        text-align: left; }
+  header .header-content .reserv {
+    top: -15px;
+    right: -7px; }
+  header .header-content .menu {
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 90px;
+    text-align: center; }
+    header .header-content .menu .trigger-menu {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: -15px;
+      right: 15px; }
+      header .header-content .menu .trigger-menu:focus {
+        color: #e2d1a6; }
+  header .header-content .menu ul.nav {
+    padding-top: 20px;
+    display: none; }
+    header .header-content .menu ul.nav.nav-open {
+      display: block; }
+    header .header-content .menu ul.nav a {
+      padding: 10px 7px; }
+  header .header-content .menu ul.nav > li {
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+    margin: 0 10px; }
+  header .header-content .menu ul.nav li.last {
+    border-bottom: none;
+    padding-bottom: 15px; }
+  header .header-content .menu ul.nav li > ul.sub-menu {
+    display: none !important; }
+  header .header-content .menu ul.nav > li {
+    float: none; }
+    header .header-content .menu ul.nav > li .nav ul {
+      display: block;
+      width: 100%; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /*Main*/
+  main .main-content .open-section .info-section .title {
+    font-size: 14px; }
+  main .main-content .open-section .info-section .info {
+    font-size: 10px;
+    line-height: 1.4; }
+  main .main-content .open-section .info-section .link a {
+    font-size: 10px; }
+  main .main-content .slider .info-slide {
+    width: 240px; }
+  main .main-content .slider .info-slide .title {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  main .main-content .slider .info-slide .info {
+    font-size: 13px; } }
+
+/* Custom, iPhone Retina */

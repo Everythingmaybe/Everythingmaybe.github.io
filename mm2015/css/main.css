@@ -292,7 +292,8 @@ main .main-content {
   color: #fff;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
-  line-height: 24px; }
+  line-height: 24px;
+  text-align: center;}
   .footer .footer-content {
     position: relative; }
     .footer .footer-content form button {

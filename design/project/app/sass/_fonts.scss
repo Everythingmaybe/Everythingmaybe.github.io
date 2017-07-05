@@ -1,0 +1,9 @@
+@import '_mixins/font-face';
+
+
+@include font-face(RobotoCondensed ,'../fonts/roboto/RobotoCondensed-Regular',400, normal);
+@include font-face(RobotoCondensed ,'../fonts/roboto/RobotoCondensed-Bold' ,bold,normal);
+@include font-face(RobotoCondensed ,'../fonts/roboto/RobotoCondensed-Light' ,100,normal);
+@include font-face(RobotoCondensed ,'../fonts/roboto/RobotoCondensed-Italic' ,400,italic);
+@include font-face(RobotoCondensed ,'../fonts/roboto/RobotoCondensed-BoldItalic' ,bold,italic);
+@include font-face(FontAwesome ,'../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont' );

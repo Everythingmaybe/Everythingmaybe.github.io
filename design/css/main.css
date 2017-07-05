@@ -28,6 +28,10 @@
   font-weight: bold;
   src: url("../fonts/roboto/RobotoCondensed-BoldItalic.eot?") format("eot"), url("../fonts/roboto/RobotoCondensed-BoldItalic.woff2") format("woff2"), url("../fonts/roboto/RobotoCondensed-BoldItalic.woff") format("woff"), url("../fonts/roboto/RobotoCondensed-BoldItalic.ttf") format("truetype"), url("../fonts/roboto/RobotoCondensed-BoldItalic.svg#RobotoCondensed") format("svg"); }
 
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.eot?") format("eot"), url("../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.svg#FontAwesome") format("svg"); }
+
 html {
   overflow-x: hidden; }
 

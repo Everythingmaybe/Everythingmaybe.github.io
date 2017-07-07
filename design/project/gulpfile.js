@@ -48,6 +48,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/smoothscroll-for-websites/SmoothScroll.js',
+		//'app/libs/skippr/dist/skippr.min.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

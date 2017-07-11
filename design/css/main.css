@@ -88,11 +88,11 @@ p.upper, span.upper, .h1.upper, .h2.upper, .h3.upper {
   .container-fluid .row > div[class*=col].big {
     height: 650px; }
 
-.row div.name-section {
+.container-fluid .row > div.name-section {
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%;
   background-image: url("../img/1.svg"); }
-  .row div.name-section.half {
+.container-fluid .row > div.name-section.half {
     -webkit-background-size: 60% 100%;
             background-size: 60% 100%;
     background-position: left; }

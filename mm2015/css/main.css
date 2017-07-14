@@ -293,7 +293,8 @@ main .main-content {
   padding: 20px;
   font-family: "Open Sans", sans-serif;
   line-height: 24px;
-  text-align: center;}
+  text-align: center;
+  margin:0 auto;}
   .footer .footer-content {
     position: relative; }
     .footer .footer-content form button {

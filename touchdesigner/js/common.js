@@ -1,15 +1,18 @@
 $(function() {
 
+	/* Animate */
+
 	$.fn.extend({
-		animateCss: function (animationName,func) {
+		animateCss: function (animationName) {
 			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 			this.addClass('animated ' + animationName).one(animationEnd, function() {
 				$(this).removeClass('animated ' + animationName);
-				func();
 			});
 			return this;
 		}
 	});
+
+	/* Slider */
 
 	var slider1;
 
@@ -42,21 +45,7 @@ $(function() {
 		$('#count').html('0'+ curren);
 	})
 
-
-	$('.dropCode').click(function(event) {
-		/* Act on the event */
-		event.preventDefault();
-		var link = '#' + $(this).attr('ref');
-
-		if($(link).hasClass('open')) {
-			$(this).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
-			$(link).removeClass('open');
-		} else {
-			$(this).removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
-			$(link).addClass('open');
-		}
-		
-	});
+	/* Animate */
 
 	$( ".feature-block .link a").hover(function() {
 		$(this).next('hr').width(65);
@@ -67,8 +56,27 @@ $(function() {
 		$(this).parents('.feature-block').find('.icon, .title').css('opacity', '1');
 	});
 
+		/* Animate scroll */
 
+	new WOW().init();
 
+	$('#buttonSubmit').click(function(e){
+		if (!($("#checkSubmit").prop("checked"))) {
+			e.preventDefault();
+			$("#formSubmit").animateCss('shake');
+		}
+	})
+
+	var valedit = $('#editSubmit').val();
+
+	$('#editSubmit').change(function() {
+		if ($('#editSubmit').val() === valedit) {
+			$('.placeholder').css('top', '10px');
+		} else {
+			$('.placeholder').css('top', '-10px');
+		}
+
+	});
 
 });
 

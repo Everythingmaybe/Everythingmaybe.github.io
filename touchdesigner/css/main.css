@@ -25,6 +25,7 @@ p, span, label {
   letter-spacing: 0.04em; }
 
 a {
+  letter-spacing: 0.14em;
   text-transform: uppercase; }
   a.button {
     font-size: 0.8125em;
@@ -508,7 +509,10 @@ header {
       right: 0;
       width: 33.3334%;
       background-color: #e0cece;
-      opacity: .85; }
+      opacity: .85;
+      -webkit-transition: 0.7s width ease-out, 0.7s left ease-out;
+      -o-transition: 0.7s width ease-out, 0.7s left ease-out;
+      transition: 0.7s width ease-out, 0.7s left ease-out; }
   .news .big .text-section {
     left: -webkit-calc(50% - 10px);
     left: calc(50% - 10px);
@@ -604,6 +608,8 @@ header {
     .news .small:hover .link {
       position: relative;
       top: -250px; }
+    .news .small:hover .user {
+      opacity: 0; }
 
 .news .news-b {
   position: absolute;
@@ -624,40 +630,93 @@ header {
     content: "";
     clear: both; }
   .news .news-b .user {
-    float: right; }
+    float: right;
+    -webkit-transition: 0.1s opacity ease-out;
+    -o-transition: 0.1s opacity ease-out;
+    transition: 0.1s opacity ease-out; }
 
 footer {
   background-color: #7d7d7d;
   color: #fff;
   padding-top: 45px;
   padding-bottom: 100px; }
-  footer form label {
+  footer form {
     position: relative;
-    display: block; }
-    footer form label input[type=checkbox] {
-      position: absolute;
-      left: -25px;
-      top: 5px; }
-    footer form label span {
+    z-index: 1; }
+    footer form label {
+      position: relative;
+      display: block;
       opacity: .3;
-      font-size: 0.75em; }
-  footer form button, footer form input[type=text] {
-    position: relative;
-    background-color: transparent;
-    text-transform: uppercase;
-    border: 0;
-    padding: 8px 0;
-    font-size: 0.875em;
-    margin-bottom: 20px; }
-  footer form input[type=text] {
-    width: 85%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
-    footer form input[type=text]:focus {
-      outline: none; }
-  footer form button {
-    position: relative;
-    left: -10px;
-    border-bottom: 2px solid #fff; }
+      -webkit-transition: 0.7s opacity ease-out;
+      -o-transition: 0.7s opacity ease-out;
+      transition: 0.7s opacity ease-out; }
+      footer form label:hover {
+        opacity: 1; }
+      footer form label input[type=checkbox] {
+        position: absolute;
+        left: -25px;
+        top: 5px; }
+      footer form label span {
+        font-size: 0.75em; }
+    footer form button, footer form input[type=text] {
+      background-color: transparent;
+      text-transform: uppercase;
+      border: 0;
+      padding: 8px 0;
+      z-index: 2;
+      font-size: 0.875em; }
+    footer form input[type=text] {
+      width: 83%;
+      letter-spacing: 0.1em; }
+      footer form input[type=text]:focus, footer form input[type=text]:hover {
+        outline: none; }
+      footer form input[type=text]:focus ~ .placeholder, footer form input[type=text]:hover ~ .placeholder {
+        top: -10px !important; }
+    footer form button {
+      letter-spacing: 0.2em;
+      position: relative;
+      left: -6px;
+      -webkit-transition: 0.4s opacity ease-out;
+      -o-transition: 0.4s opacity ease-out;
+      transition: 0.4s opacity ease-out; }
+      footer form button:hover {
+        opacity: 0.5; }
+        footer form button:hover::after {
+          border-color: rgba(255, 255, 255, 0.5);
+          width: 50%; }
+      footer form button::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        border-top: 2px solid #fff;
+        -webkit-transition: 0.4s ease-out;
+        -o-transition: 0.4s ease-out;
+        transition: 0.4s ease-out;
+        -webkit-transition-property: opacity, width;
+        -o-transition-property: opacity, width;
+        transition-property: opacity, width; }
+    footer form .placeholder {
+      position: absolute;
+      top: 10px;
+      left: 3px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      opacity: 0.5;
+      z-index: -1;
+      -webkit-transition: 0.7s ease-out;
+      -o-transition: 0.7s ease-out;
+      transition: 0.7s ease-out;
+      -webkit-transition-property: top;
+      -o-transition-property: top;
+      transition-property: top; }
+  footer hr {
+    width: -webkit-calc(83% + 2.7275em);
+    width: calc(83% + 2.7275em);
+    margin-top: 0;
+    border-color: rgba(255, 255, 255, 0.1); }
 
 .newsletter {
   margin-bottom: 50px; }
@@ -672,7 +731,12 @@ footer {
   margin-top: 105px; }
 
 .footer-block ul li {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+  .footer-block ul li:hover {
+    opacity: 0.5; }
 
 .footer-block i {
   padding-right: 30px; }
@@ -770,6 +834,31 @@ footer {
 #count {
   position: relative; }
 
+/* Animate settings */
+.global-fadeindown-animate {
+  -webkit-animation-name: fadeindown20px;
+          animation-name: fadeindown20px; }
+
+@-webkit-keyframes fadeindown20px {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeindown20px {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
 @media (min-width: 1450px) {
   .container {
     width: 1440px; } }
@@ -816,7 +905,11 @@ footer {
     margin-top: 0;
     margin-left: 0; }
   .news .link {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  footer form {
+    margin-bottom: 30px; }
+  .footer-block.margin-t3 {
+    margin-top: 30px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -833,7 +926,10 @@ footer {
   .carusel .big-button-slider .line {
     width: 20px; }
   .carusel .big-button-slider:hover .line {
-    width: 40px; } }
+    width: 40px; }
+  footer form label input[type=checkbox] {
+    left: 0px;
+    top: -13px; } }
 
 @media only screen and (max-width: 580px) {
   #slider1Wrapper {
@@ -900,11 +996,7 @@ footer {
     padding-left: 20px;
     background-color: rgba(255, 255, 255, 0.6); }
   .news .big .img-section .pattern-block {
-    display: none; }
-  footer form {
-    margin-bottom: 30px; }
-  .footer-block.margin-t3 {
-    margin-top: 30px; } }
+    display: none; } }
 
 /* Custom, iPhone Retina */
 /*==========  Mobile First  ==========*/

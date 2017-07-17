@@ -147,7 +147,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.5s">
             <div class="feature-block">
               <div class="icon"><img src="img/icon_vr.png" alt=""></div>
               <div class="title">
@@ -168,7 +168,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4 wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.7s">
             <div class="feature-block">
               <div class="icon"><img src="img/icon_pen.png" alt=""></div>
               <div class="title">
@@ -189,7 +189,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.9s">
             <div class="feature-block">
               <div class="icon"><img src="img/icon_cam.png" alt=""></div>
               <div class="title">
@@ -246,7 +246,7 @@
     <section class="section news">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.5s">
             <div class="big news-block">
               <div class="img-section" style="background-image:url(img/big_news.png);">
                 <div class="pattern-block"></div>
@@ -272,7 +272,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-md-4 col-md-offset-0 clear-width-xs">
+          <div class="col-xs-6 col-md-4 col-md-offset-0 clear-width-xs wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.7s">
             <div class="news-block small" style="background-image:url(img/small_news.png);">
               <div class="news-b">
                 <div class="top-section">
@@ -294,7 +294,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-md-4 col-md-offset-0 clear-width-xs">
+          <div class="col-xs-6 col-md-4 col-md-offset-0 clear-width-xs wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="0.9s">
             <div class="news-block small" style="background-image:url(img/small_news.png);">
               <div class="news-b">
                 <div class="top-section">
@@ -316,7 +316,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 clear-width-xs">
+          <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 clear-width-xs wow global-fadeindown-animate" data-wow-duration="1s" data-wow-delay="1.1s">
             <div class="news-block small" style="background-image:url(img/small_news.png);">
               <div class="news-b">
                 <div class="top-section">
@@ -362,12 +362,14 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-md-4">
-              <form>
-                <input type="text">
-                <button>submit</button>
+              <form id="formSubmit">
+                <input id="editSubmit" type="text">
+                <button id="buttonSubmit">submit</button>
+                <hr align="left">
                 <label> 
-                  <input type="checkbox"><span>Yes, I wish to receive the selected newsletters(s) from Derivative. I understand that I can unsubscribe from the newsletter(s) at any time using the unsubscribe link on this page, or using the unsubscribe link found at the bottom of each newsletter.</span>
+                  <input id="checkSubmit" type="checkbox"><span>Yes, I wish to receive the selected newsletters(s) from Derivative. I understand that I can unsubscribe from the newsletter(s) at any time using the unsubscribe link on this page, or using the unsubscribe link found at the bottom of each newsletter.</span>
                 </label>
+                <div class="placeholder">type your email</div>
               </form>
             </div>
             <div class="col-xs-6 col-md-offset-2 col-md-2">

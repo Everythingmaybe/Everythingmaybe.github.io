@@ -1,17 +1,4 @@
 $(function() {
-
-	/* Animate */
-
-	$.fn.extend({
-		animateCss: function (animationName) {
-			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-			this.addClass('animated ' + animationName).one(animationEnd, function() {
-				$(this).removeClass('animated ' + animationName);
-			});
-			return this;
-		}
-	});
-
 	/* Slider */
 
 	var slider1;
@@ -56,7 +43,17 @@ $(function() {
 		$(this).parents('.feature-block').find('.icon, .title').css('opacity', '1');
 	});
 
-		/* Animate scroll */
+	/* Animate scroll */
+
+	$.fn.extend({
+		animateCss: function (animationName) {
+			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
+			});
+			return this;
+		}
+	});
 
 	new WOW().init();
 
@@ -67,7 +64,7 @@ $(function() {
 		}
 	})
 
-	var valedit = $('#editSubmit').val();
+	var valedit = "";
 
 	$('#editSubmit').change(function() {
 		if ($('#editSubmit').val() === valedit) {
@@ -78,5 +75,10 @@ $(function() {
 
 	});
 
+	/* Mobile Nav */
+	$('.menu-toggle').click(function() {
+		$('.mobile-nav').toggleClass('active');
+		$(this).toggleClass('active');
+	});
 });
 

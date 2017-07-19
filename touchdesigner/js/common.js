@@ -28,8 +28,8 @@ $(function() {
 	});
 
 	$('#slider1Dots>a').click(function() {
-		var curren = $(this).attr('Index');
-		$('#count').html('0'+ curren);
+		var current = $(this).attr('Index');
+		$('#count').html('0'+ current);
 	})
 
 	/* Animate */
@@ -74,6 +74,20 @@ $(function() {
 		}
 
 	});
+
+	/* Desktop Nav */
+	$('.menu > ul > li').hover(function() {
+		$(this).find('.submenu,.back-pattern').slideDown('fast');
+	}, function() {
+		$(this).find('.submenu,.back-pattern').slideUp('fast');
+	});
+
+	/* Sub menu */
+
+	$('.submenu').before('<div class="back-pattern"></div>');
+
+	var  submenuheight = $('.submenu').height();
+	$('.back-pattern').height(submenuheight);
 
 	/* Mobile Nav */
 	$('.menu-toggle').click(function() {

@@ -150,9 +150,6 @@ hr {
   -o-transition: width 0.5s ease-out;
   transition: width 0.5s ease-out; }
 
-.vis-lg {
-  display: none !important; }
-
 header {
   top: 0;
   left: 0;
@@ -214,8 +211,6 @@ header {
     opacity: .5; }
     header .menu ul li:hover > a > .logo {
       opacity: .5; }
-  header .menu ul > li:hover ul.submenu {
-    display: block; }
   header .profile > ul {
     margin-top: 26px;
     text-align: right; }
@@ -236,6 +231,14 @@ header {
       margin-left: 1vw; }
   header .profile > ul > li:hover:not(:last-child) > a {
     opacity: .5; }
+  header .back-pattern {
+    display: none;
+    position: absolute;
+    height: 86px;
+    width: 300%;
+    top: 100%;
+    left: -100%;
+    background-color: #cccbcb; }
   header ul.submenu {
     display: none;
     z-index: 110;
@@ -245,7 +248,54 @@ header {
     width: 100%;
     background-color: #cccbcb;
     text-align: center; }
+    header ul.submenu li:nth-child(1) {
+      -webkit-animation-name: fadeinopacity;
+              animation-name: fadeinopacity;
+      -webkit-animation-duration: 0.7s;
+              animation-duration: 0.7s;
+      -webkit-animation-delay: 0.1s;
+              animation-delay: 0.1s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header ul.submenu li:nth-child(2) {
+      -webkit-animation-name: fadeinopacity;
+              animation-name: fadeinopacity;
+      -webkit-animation-duration: 0.7s;
+              animation-duration: 0.7s;
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header ul.submenu li:nth-child(3) {
+      -webkit-animation-name: fadeinopacity;
+              animation-name: fadeinopacity;
+      -webkit-animation-duration: 0.7s;
+              animation-duration: 0.7s;
+      -webkit-animation-delay: 0.3s;
+              animation-delay: 0.3s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header ul.submenu li:nth-child(4) {
+      -webkit-animation-name: fadeinopacity;
+              animation-name: fadeinopacity;
+      -webkit-animation-duration: 0.7s;
+              animation-duration: 0.7s;
+      -webkit-animation-delay: 0.4s;
+              animation-delay: 0.4s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header ul.submenu li:nth-child(5) {
+      -webkit-animation-name: fadeinopacity;
+              animation-name: fadeinopacity;
+      -webkit-animation-duration: 0.7s;
+              animation-duration: 0.7s;
+      -webkit-animation-delay: 0.5s;
+              animation-delay: 0.5s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
     header ul.submenu li {
+      z-index: 110;
+      opacity: 0;
       margin-right: 0; }
       header ul.submenu li a {
         color: #000;
@@ -258,18 +308,6 @@ header {
         header ul.submenu li a i:last-child {
           font-size: 11px;
           line-height: 30px; }
-    header ul.submenu:before, header ul.submenu:after {
-      z-index: 109;
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #cccbcb; }
-    header ul.submenu:before {
-      left: -97%; }
-    header ul.submenu:after {
-      left: 97%; }
 
 .mobile-nav {
   position: fixed;
@@ -659,35 +697,27 @@ header {
 .news .small {
   position: relative;
   background-position: center;
-  -webkit-background-size: 150% 150%;
-          background-size: 150%;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
-  -webkit-transition: 0.5s -webkit-background-size ease-out;
-  transition: 0.5s -webkit-background-size ease-out;
-  -o-transition: 0.5s background-size ease-out;
-  transition: 0.5s background-size ease-out;
-  transition: 0.5s background-size ease-out, 0.5s -webkit-background-size ease-out; }
-  .news .small:hover {
-    -webkit-background-size: 130% 130%;
-            background-size: 130%; }
-    .news .small:hover .news-b {
-      top: 170px;
-      left: -40px;
-      padding-left: 90px;
-      padding-top: 28px;
-      background-color: rgba(230, 231, 234, 0.95); }
-    .news .small:hover .top-section .category {
-      float: right; }
-      .news .small:hover .top-section .category span {
-        display: none; }
-    .news .small:hover .top-section .comments {
+  overflow: hidden; }
+  .news .small:hover .news-b {
+    top: 170px;
+    left: -40px;
+    padding-left: 90px;
+    padding-top: 28px;
+    background-color: rgba(230, 231, 234, 0.95); }
+  .news .small:hover .top-section .category {
+    float: right; }
+    .news .small:hover .top-section .category span {
       display: none; }
-    .news .small:hover .link {
-      position: relative;
-      top: -250px; }
-    .news .small:hover .user {
-      opacity: 0; }
+  .news .small:hover .top-section .comments {
+    display: none; }
+  .news .small:hover .link {
+    position: relative;
+    top: -250px; }
+  .news .small:hover .user {
+    opacity: 0; }
 
 .news .news-b {
   position: absolute;
@@ -744,7 +774,7 @@ footer {
       z-index: 2;
       font-size: 0.875em; }
     footer form input[type=text] {
-      width: 83%;
+      width: 82%;
       letter-spacing: 0.1em; }
       footer form input[type=text]:focus, footer form input[type=text]:hover {
         outline: none; }
@@ -906,7 +936,7 @@ footer {
   top: 0px;
   padding-right: 2px;
   border-right: 1px solid #000;
-  height: 85px;
+  height: 75px;
   opacity: 1; }
 
 #count {
@@ -936,6 +966,18 @@ footer {
     opacity: 1;
     -webkit-transform: none;
             transform: none; } }
+
+@-webkit-keyframes fadeinopacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeinopacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 @media (min-width: 1450px) {
   .container {
@@ -974,7 +1016,7 @@ footer {
     height: 300px;
     padding: 40px; }
   #slider1Dots a.slider1-currentDot::before {
-    height: 45px; }
+    height: 35px; }
   .carusel .big-button-slider .line {
     width: 40px; }
   .carusel .big-button-slider:hover .line {
@@ -1004,7 +1046,7 @@ footer {
     height: 280px;
     padding: 30px; }
   #slider1Dots a.slider1-currentDot::before {
-    height: 35px; }
+    height: 25px; }
   .carusel .big-button-slider .line {
     width: 20px; }
   .carusel .big-button-slider:hover .line {

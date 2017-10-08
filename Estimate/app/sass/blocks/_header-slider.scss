@@ -1,0 +1,63 @@
+.siema {
+  .head-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../img/header-img-1.jpg);
+    &.second {
+      background-image: url(../img/header-img-2.jpg);
+      h2 {
+        color: #000;
+      }
+    }
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+  }
+  h2 {
+    color: #fff;
+    font-size: 5em;
+    font-weight: 300;
+    em {
+      font-style: normal;
+      color: yellow;
+    }
+  }
+  .wrapper-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    button {
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 50%;
+      font-size: 0;
+      padding: 0;
+      background-color: #ffffff;
+      border: none;
+    }
+  }
+}
+
+.full-height {
+  height: 100vh;
+  border-bottom: 2px solid black;
+}
+
+.second-section {
+  position: relative;
+  height: 100vh;
+  background-size: contain;
+  background-position: 125% center;
+  background-repeat: no-repeat;
+  background-image: url(../img/second-section.jpg);
+}

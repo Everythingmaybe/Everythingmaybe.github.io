@@ -1,5 +1,5 @@
 $(function() {
-    const mySiema = new Siema({
+    const mySiema1 = new Siema({
         selector: '.siema',
         selectorWrapper: '.wrapper-btn',
         duration: 200,
@@ -27,6 +27,6 @@ $(function() {
     }
 
 // Trigger pagination creator
-    mySiema.addPagination();
+    mySiema1.addPagination();
 });
 

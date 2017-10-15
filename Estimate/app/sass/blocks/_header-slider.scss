@@ -9,7 +9,7 @@
     &.second {
       background-image: url(../img/header-img-2.jpg);
       h2 {
-        color: #000;
+        color: $black;
       }
     }
   }
@@ -21,12 +21,12 @@
     transform-origin: center;
   }
   h2 {
-    color: #fff;
+    color: $white;
     font-size: 5em;
     font-weight: 300;
     em {
       font-style: normal;
-      color: yellow;
+      color: $yell;
     }
   }
   .wrapper-btn {
@@ -42,7 +42,7 @@
       border-radius: 50%;
       font-size: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: $white;
       border: none;
     }
   }
@@ -50,14 +50,63 @@
 
 .full-height {
   height: 100vh;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $black;
 }
 
 .second-section {
   position: relative;
   height: 100vh;
+  padding-top: 90px;
   background-size: contain;
   background-position: 125% center;
   background-repeat: no-repeat;
   background-image: url(../img/second-section.jpg);
+}
+
+.section-title {
+  position: relative;
+  font-size:1.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 100px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: -45px;
+    width: 90px;
+    height: 3px;
+    background-color: $black;
+  }
+  &.white {
+    color: $white;
+    &:after {
+      color: $white;
+    }
+  }
+}
+
+h2 {
+  color: $black;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  margin: 0 0 50px;
+}
+
+.button {
+  display: inline-block;
+  border: 2px solid $black;
+  font-size: 0.8em;
+  padding:  1em 1.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  padding-left: 120px;
 }

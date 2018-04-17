@@ -1,0 +1,27 @@
+img {
+  max-width: 100%;
+}
+
+.teasers-section {
+  .teaser {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:hover {
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .4);
+    }
+  }
+  .description-section {
+    margin-top: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    a {
+      color: #4c4c4c;
+    }
+  }
+}

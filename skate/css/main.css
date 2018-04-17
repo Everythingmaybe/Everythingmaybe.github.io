@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'SegoeUI';
+  src: url("../fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/SegoeUI/SegoeUIBold/SegoeUIBold.eot") format("embedded-opentype"), url("../fonts/SegoeUI/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUI/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 700; }
+
+body {
+  background-color: black; }

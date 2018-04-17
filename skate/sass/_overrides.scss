@@ -1,0 +1,48 @@
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.no-padding-l {
+  padding-left: 0;
+}
+
+body {
+  font-weight: 300;
+  font-family:Roboto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.h1,h1 {
+  display: block;
+  margin: 0px auto 50px;
+  padding-top: 60px;
+  font-family: Gothampro, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -1.4px;
+}
+
+.h2,h2 {
+  display: block;
+  margin-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Gothampro, sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+
+h4,.h4 {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Gothampro, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center
+}
